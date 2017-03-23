@@ -27,3 +27,46 @@ body {
   padding: 5px;
   padding-left: 10px;
 }
+
+.grid1 {
+  display: grid;
+  margin-top: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+  grid-gap: 20px;
+}
+
+.grid1 div {
+  background-color: rgb(195, 50, 141);
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 100px);
+  margin-top: 30px;
+  grid-gap: 20px;
+}
+
+.grid2 div:nth-child(1) {
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
+.grid2 div:nth-child(2) {
+  grid-column-start: 1;
+  grid-row: 2;
+}
+
+.grid2 div:nth-child(3) {
+  grid-column: 2 / 4;
+  grid-row: 2;
+}
+
+.grid2 div:nth-child(4) {
+  grid-column: 3 /5;
+}
+
+.grid2 div {
+  background-color: rgb(47, 227, 186);
+  padding: 20px;
+}
